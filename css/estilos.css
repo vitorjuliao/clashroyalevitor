@@ -1,5 +1,5 @@
 :root {
-  --fundo: #000000; /* fundo preto */
+  --fundo: #000000;
   --fundo-card: #1e1e2f;
   --fundo-card-hover: #2a2a40;
   --texto-principal: #ffffff;
@@ -8,12 +8,10 @@
   --rosa: #F85B72;
 }
 
-/* --- RESET EXTRA --- */
 * {
   transition: all 0.3s ease;
 }
 
-/* --- VÍDEO DE FUNDO --- */
 #video-fundo {
   position: fixed;
   top: 0;
@@ -21,18 +19,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2; /* atrás do overlay e conteúdo */
+  z-index: -2; 
 }
 
-/* --- OVERLAY ESCURO --- */
 #overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5); /* cinza escuro semi-transparente */
-  z-index: -1; /* entre o vídeo e o conteúdo */
+  background: rgba(0,0,0,0.5); 
+  z-index: -1; 
 }
 
 body {
@@ -44,7 +41,7 @@ body {
   min-height: 100vh;
   color: var(--texto-principal);
   padding: 20px;
-  position: relative; /* garante que o conteúdo fique acima do overlay */
+  position: relative;
 }
 
 /* --- TÍTULO --- */
@@ -58,14 +55,13 @@ body {
   position: relative;
 }
 
-/* --- CONTÊINER DOS BOTÕES COM EFEITO VIDRO --- */
 .teclado-container {
-  background: rgba(255, 255, 255, 0.1); /* transparente */
-  backdrop-filter: blur(10px); /* efeito borrado */
-  -webkit-backdrop-filter: blur(10px); /* compatibilidade Safari */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* sombra sutil */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
   margin-bottom: 40px;
   width: 100%;
   max-width: 860px;
@@ -76,7 +72,6 @@ body {
   position: relative;
 }
 
-/* --- GRID DE BOTÕES --- */
 .teclado {
   display: grid;
   gap: 35px;
@@ -85,9 +80,8 @@ body {
   max-width: 800px;
 }
 
-/* --- BOTÕES COM EFEITO VIDRO BORRADO --- */
 .tecla {
-  background: rgba(255, 255, 255, 0.05); /* quase transparente */
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;
@@ -96,30 +90,26 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* sombra suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
-/* Mantém cores originais das imagens */
 .tecla img {
   width: 100px;
   height: 100px;
 }
 
-/* Hover deixa o botão mais visível */
 .tecla:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-6px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* --- QUANDO CLICAR --- */
 .tecla:active {
   transform: scale(0.95);
   background: var(--rosa);
 }
 
-/* --- RODAPÉ --- */
 .rodape {
   margin-top: 40px;
   text-align: center;
